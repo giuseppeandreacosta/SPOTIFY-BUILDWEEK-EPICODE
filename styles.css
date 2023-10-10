@@ -107,7 +107,12 @@ body {
   border: none;
   transition: width 0.3s ease;
   display: none;
-
+}
+#search-input::placeholder{
+  background-color: #433e3e;
+  border: none;
+  outline: none;
+  color: white;
 } 
 
 /* .o:focus + #search-input {
