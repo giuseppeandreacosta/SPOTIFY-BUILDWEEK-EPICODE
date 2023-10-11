@@ -5,7 +5,7 @@ searchIcon.addEventListener('click', () => {
   searchInput.style.display = "block";
   searchIcon.style.display = "none";
   searchInput.style.width = "150px";
-  searchInput.style.border = "2px solid #81b71a";
+  searchInput.style.border = "2px solid #00FF00";
   searchInput.focus();
 });
 
