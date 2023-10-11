@@ -1,7 +1,7 @@
 // QUERY STRING
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
-let contenuto = document.querySelector('#album-image .row')
+let contenuto = document.querySelector('.album-image .row')
 
 // FUNZIONE CHE VA A POPOLARE LA PAGINA CON L'ALBUM SELEZIONATO
 const getAlbum = async (id) => {
@@ -43,7 +43,7 @@ const displayAlbum = (album, artist, tracks) => {
     <div>
       <p>Album</p>
       <h1>${album.title}</h1>
-      <p>${artist.picture_small} ${artist.name} • ${album.release_date} • ${tracks.total} ${timeStampFromDuration(album.duration)}</p>
+      <p>${artist.picture_small} <a href="../artist/artist.html?id=${id}">${artist.name}</a> • ${album.release_date} • ${tracks.total} brani,  ${timeStampFromDuration(album.duration)}</p>
     </div>
   </div>
 
@@ -66,7 +66,7 @@ const displayAlbum = (album, artist, tracks) => {
     <tbody>
       <tr>
         <th scope="row">${tracks.data.track_position}</th>
-        <td>${tracks.data.title}</td>
+        <td class="song">${tracks.data.title}</td>
         <td>${artist.name}</td>
         <td>${timeStampFromDuration(tracks.data.duration)}</td>
       </tr>
