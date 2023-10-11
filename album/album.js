@@ -47,7 +47,7 @@ const displayAlbum = (album, artist, tracks) => {
     </div>
   </div>
 
-  <div class="button-artist d-flex">
+  <div class="button-album d-flex">
     <button class="btn btn-play me-2"></button>
     <i class="bi bi-suit-heart-fill"></i>
     <i class="bi bi-arrow-down-circle"></i>

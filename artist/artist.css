@@ -1,0 +1,57 @@
+.btn-play {
+    background-color: #00FF00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 70px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.btn-play:hover {
+    background-color: #00FF00;
+
+}
+
+
+.artist-name h1{
+    color: white;
+}
+
+#discografia h3 {
+    color: white;
+}
+
+.card-body h5 {
+    color: white;
+}
+
+.card-body p {
+    color: gray;
+}
+
+.card-img-top {
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: rgba(15, 15, 15, 0.952);
+}
+
+.card:hover {
+    background-color: rgb(110, 108, 108);
+}
+
+.card-body button::before {
+    transform: scale(1);
+    transition: all 0.75s ease-in-out;
+    cursor: pointer;
+}
+
+.card-body button:hover::before {
+    transform: scale(1.2);
+}
