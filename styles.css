@@ -89,7 +89,6 @@ body {
 }
 .library-text {
   display: flex;
-  align-items: center;
   margin-left: 0;
 }
 
@@ -102,18 +101,34 @@ body {
   margin-left: 10px;
 }
 
- #search-input {
+#search-input {
   padding: 0;
   border: none;
   transition: width 0.3s ease;
   display: none;
-}
-#search-input::placeholder{
-  background-color: #433e3e;
+  background-color: transparent; 
+  color: #fff;
+  width: 0; 
   border: none;
   outline: none;
-  color: white;
-} 
+  box-shadow: none;
+  border-radius: 1;
+  margin: 0;
+}
+
+
+#ricerca{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2px;
+  margin-top: 2px;
+} */
 
 /* .o:focus + #search-input {
   width: 150px; 
