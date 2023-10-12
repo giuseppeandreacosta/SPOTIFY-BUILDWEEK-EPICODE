@@ -22,6 +22,8 @@
   </head>
 
   <body>
+
+    
     <div class="container-fluid ">
       <div class="row ">
   <aside class="col-md-3 aside-width">
@@ -96,7 +98,7 @@
 
 
 <main class="col-md-9">
-<div class="container-fluid content-container mt-auto">
+<div id="dio" class="container-fluid content-container mt-auto">
   <div class="row align-items-center mt-1">
     <div class="col-md-12 d-flex justify-content-between">
       <!-- Contenuto del Main -->
@@ -173,9 +175,10 @@
   <i class="bi bi-repeat"></i>
   
 </div>
+
 <div class="input-time-range d-flex align-items-center justify-content-center">
   <span class="current-start">0:00</span>
-  <input type="range">
+  <input type="range" id="time-range" min="0" value="0">
   <span class="current end">0:00</span>
 </div>
 <div class="end-icons-with-volume ">
@@ -184,8 +187,8 @@
   <i class="bi bi-speaker-fill"></i>
   <i class="bi bi-volume-mute"></i>
   <i class="bi bi-volume-off-fill"></i>
+  <input type="range" id="volume-range" min="0" max="1" step="0.1" value="1">
   <i class="bi bi-volume-up-fill"></i>
-  <input type="range">
 </div>
 
 </div>

@@ -52,18 +52,7 @@ body,html {
     width: 289px;
   }
 
-  @media (max-width: 768px) {
-    .aside-width {
-        width: 100%;
-        /* Modifiche specifiche per schermi di dimensioni inferiori a 768px */
-    }
-}
-@media (min-width: 768px) {
-  .content-container {
-    width: 109%;
-      /* Modifiche specifiche per schermi di dimensioni inferiori a 768px */
-  }
-}
+
 
   .buttons button {
     background-color: transparent;
@@ -136,11 +125,10 @@ body,html {
     display: none;
     background-color: transparent; 
     color: #fff;
-    width: 0; 
+    width: 10px; 
     border: none;
-    outline: none;
-    box-shadow: none;
-    border-radius: 1;
+    
+    border-radius: 1px;
     margin: 0;
   }
   
@@ -153,7 +141,7 @@ body,html {
 
   /*main*/
 
-
+  
 
 .content-container {
     width: 114%;
@@ -315,19 +303,68 @@ footer {
     color: #00FF00;
 }
 
+
+
 .end-icons-with-volume {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
     margin-left: auto;
-    margin-top: -27px;  
+    margin-top: -35px;  
+}
+
+.end-icons-with-volume .bi {
+  color:white;
+}
+
+.end-icons-with-volume .bi:hover {
+    color: #00FF00;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+
+  height: 8px;
+  background-color: #555;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #00FF00;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #00CC00;
+}
+
+.input-time-range {
+  gap: 12px;
 }
 
 .input-time-range input {
     height: 10px;
     color: white;
     width: 100px;
+    
+}
+
+.input-time-range span {
+  color:white;
+  font-size: 0.9rem;
 }
 
 .input-time-range input:nth-child(1) {
@@ -343,6 +380,12 @@ footer {
     width: 20px;
 }
 
+
+@media (max-width: 767px) {
+  .content-container {
+    width: 100%;
+  }
+}
 
 
 

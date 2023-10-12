@@ -17,3 +17,4 @@ searchInput.addEventListener("blur", () => {
     }
 });
 
+
