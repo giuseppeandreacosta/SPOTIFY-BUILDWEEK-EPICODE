@@ -17,12 +17,12 @@ searchInput.addEventListener("blur", () => {
   }
 });
 
-//fetch
+// fetch
 // const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/${id}";
 // const cardContainer = document.getElementById("albumContainer");
 // fetch(apiUrl)
 //   .then((response) => response.json())
-//   .then((data) => {
+//   .then((data) => { 
 //     const cardContainer = document.getElementById("albumContainer");
 
 //     data.forEach((item) => {
@@ -45,9 +45,9 @@ searchInput.addEventListener("blur", () => {
 //     console.error("Errore nella chiamata API:", error);
 //   });
 
-//PROVA PER ID RANDOM
+// //PROVA PER ID RANDOM
 function generateRandomId() {
-  const randomNumber = Math.floor(Math.random() * 1000); 
+  const randomNumber = Math.floor(Math.random() * 100000000); 
   return randomNumber;
 }
 const randomId = generateRandomId();
