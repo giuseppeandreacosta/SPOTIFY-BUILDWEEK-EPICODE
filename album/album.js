@@ -3,39 +3,48 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 let contenuto = document.querySelector('.album-image .row')
 
+function timeStampFromDuration(duration) {
+  const minutes = Math.floor(duration / 60)
+  const seconds = duration % 60
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+    2,
+    "0"
+  )}`
+}
+
 // FUNZIONE CHE VA A POPOLARE LA PAGINA CON L'ALBUM SELEZIONATO
 const getAlbum = async (id) => {
-    try {
-        const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
-        const album = await response.json()
-        return album
-    } catch (error) {
-        console.log(error)
-    }
+  try {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
+    const album = await response.json()
+    return album
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const getArtist = async (id) => {
-    try {
-        const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`)
-        const artist = await response.json()
-        return artist
-    } catch (error) {
-        console.log(error)
-    }
+  try {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`)
+    const artist = await response.json()
+    return artist
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const getTracklist = async (id) => {
-    try {
-        const response = await fetch(`https://api.deezer.com/album/${id}/tracks`)
-        const tracks = await response.json()
-        return tracks
-    } catch (error) {
-        console.log(error)
-    }
+  try {
+    const response = await fetch(`https://api.deezer.com/album/${id}/tracks`)
+    const tracks = await response.json()
+    return tracks
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const displayAlbum = (album, artist, tracks) => {
-    contenuto.innerHTML += /*html*/ `
+  contenuto.innerHTML += /*html*/ `
     <div id="title-album d-flex">
     <div>
       <img src="${album.cover_medium}" alt="">
@@ -74,6 +83,10 @@ const displayAlbum = (album, artist, tracks) => {
   </table>
     
     `
+}
+
+window.onload = async function () {
+  
 }
 
 // DA AGGIUNGERE LE FUNZIONI PER FARE LA RICERCA QUI SOTTO
