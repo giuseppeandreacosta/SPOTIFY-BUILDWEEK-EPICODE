@@ -76,7 +76,7 @@
             <ion-icon class="o" name="search-outline"></ion-icon>
             <input
               type="text"
-              class="form-control bg-white"
+              class="form-control text-white"
               id="search-input"
               placeholder="Cerca..."
             />
@@ -88,6 +88,9 @@
             ></ion-icon>
           </div>
         </div>
+        <div id="albumContainer" class="container mt-4">
+          <!-- Le carte degli album saranno aggiunte qui -->
+      </div>
       </div>
     </div>
   </div>
@@ -158,15 +161,26 @@
     </div>
   </div>
 </div>
+
+<div class="content-container d-none">
+  <img class="artist-image" src="/Spotify EPIcode/Spotify-logo.png" alt="Nome dell'Artista">
+  <h3 class="artist-name">Nome dell'Artista</h3>
+  <a class="follow-link" href="#">Segui</a>
+  <div class="icons-container">
+    <i class="bi bi-three-dots-vertical"></i>
+    <i class="bi bi-shuffle random-icon"></i>
+    <i class="bi bi-play-circle-fill play-icon"></i>
+  </div>
+</div>
 </main>
 </div>
 </div>
 
 <!-- Footer a larghezza piena (12 colonne) -->
-<footer class="row">
+<footer class="row mb-3">
 <div class="col-md-12">
 
-<div class="iconsmusic text-white d-flex align-items-center ">
+<div class="iconsmusic text-white d-flex align-items-center mb-1">
   <i class="bi bi-shuffle"></i>
   <i class="bi bi-skip-start-fill"></i>
   <i class="bi bi-pause-circle-fill"></i>
@@ -178,7 +192,7 @@
 
 <div class="input-time-range d-flex align-items-center justify-content-center">
   <span class="current-start">0:00</span>
-  <input type="range" id="time-range" min="0" value="0">
+  <input type="range" id="time-range" min="0" max="1" step="0.1" value="1">
   <span class="current end">0:00</span>
 </div>
 <div class="end-icons-with-volume ">
