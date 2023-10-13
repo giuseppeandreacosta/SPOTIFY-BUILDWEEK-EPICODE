@@ -48,7 +48,7 @@ const displayTracks = (data) => {
         <div class="card p-3 col-md-2 align-items-center" id="${song.album.id}">
           <img src="${song.album.cover_small}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h6 class="card-text">${song.album.title}</h6>
+            <a href="../album/album.html?id=${song.album.id}" style="text-decoration: none; color:white;"><h6 class="card-text">${song.album.title}</h6></a>
             <p class="card-text">${song.album.type}</p>
           </div>
         </div>

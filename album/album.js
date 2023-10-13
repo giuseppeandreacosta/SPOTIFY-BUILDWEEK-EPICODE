@@ -23,15 +23,6 @@ const getAlbum = async (id) => {
   }
 }
 
-const getArtist = async (id) => {
-  try {
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`)
-    const artist = await response.json()
-    return artist
-  } catch (error) {
-    console.log(error)
-  }
-}
 
 const getTracklist = async (id) => {
   try {

@@ -3,7 +3,6 @@ const searchInput = document.querySelector("#search-input");
 
 const contenuto = document.querySelector("#artist-container .row");
 
-const contenuto = document.querySelector("#artist-container .row");
 
 searchIcon.addEventListener("click", () => {
   searchInput.style.display = "block";
@@ -42,7 +41,7 @@ const displayResult = (result, contenuto) => {
       <div class="card col-md-2 p-3 align-items-center" id="${song.id}">
         <img src="${song.artist.picture_small}" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="../artist/artist.html?id=${song.artist.id}"><h6 class="card-text">${song.artist.name}</h6></a>
+          <a class="artistPage" href="../artist/artist.html?id=${song.artist.id}"><h6 class="card-text">${song.artist.name}</h6></a>
           <p class="card-text">${song.artist.type}</p>
         </div>
       </div>
