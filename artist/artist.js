@@ -24,17 +24,9 @@ const getArtist = async (id) => {
     }
 }
 
-const getTracklist = async (id) => {
-    try {
-        const response = await fetch(`https://api.deezer.com/album/${id}/tracks`)
-        const tracks = await response.json()
-        return tracks
-    } catch (error) {
-        console.log(error)
-    }
-}
 
-const displayArtist = (album, artist, tracks) => {
+
+const displayArtist = (album, artist) => {
     contenuto.innerHTML += /*html*/ `
     <div class="artist-name">
     <h1>${artist.name}</h1>
@@ -69,6 +61,18 @@ const displayArtist = (album, artist, tracks) => {
 const bgArtist = () => {
     const bg = document.querySelector('.artist-name')
     bg.style.background = '${artist.picture_xl}'
+}
+
+
+window.onload = async function () {
+  try{
+    const artist = await getArtist(id)
+    const album = await getAlbum(id)
+    const tracklist = await getTracklist(id)
+    displayArtist(artist, album, tracklist)
+  } catch (error){
+    console.log(error)
+  }
 }
 
 // DA AGGIUNGERE LE FUNZIONI PER FARE LA RICERCA QUI SOTTO
