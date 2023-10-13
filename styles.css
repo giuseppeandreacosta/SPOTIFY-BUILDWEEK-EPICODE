@@ -135,7 +135,7 @@ body,html {
     transition: width 0.3s ease;
     display: none;
     background-color: transparent; 
-    color: #fff;
+    /* color: #fff; */
     width: 0; 
     border: none;
     outline: none;
@@ -205,9 +205,7 @@ body,html {
     border-radius: 4px;
 }
 
-.col-md-2 img {
-    width: 100%;
-}
+
 
 .bg-sponsor {
     background-color: #090909;
@@ -269,17 +267,22 @@ body,html {
 
 .card {
     height: 200px;
-    width: 130px;
-    background-color: #121212;
+    width: 150px;
+    background-color: #2e2e2e;
     
 }
 
 .card img {
-    width: 120px;
-    height: 120px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     text-align: center;
 }
+
+.card-body{
+  color: white
+}
+
 
 /* footer */
 
