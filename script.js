@@ -4,11 +4,14 @@ const searchInput = document.querySelector("#search-input");
 const contenuto = document.querySelector("#artist-container .row")
 
 
-searchIcon.addEventListener('click', () => {
+const contenuto = document.querySelector("#artist-container .row")
+
+
+searchIcon.addEventListener("click", () => {
   searchInput.style.display = "block";
   searchIcon.style.display = "none";
   searchInput.style.width = "150px";
-  searchInput.style.border = "2px solid #81b71a";
+  searchInput.style.border = "2px solid #00FF00";
   searchInput.focus();
 });
 
@@ -19,7 +22,6 @@ searchInput.addEventListener("blur", () => {
     searchInput.style.width = "0";
   }
 });
-
 
 
 const getResult = async (query) => {
